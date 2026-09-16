@@ -20,22 +20,22 @@ function iniciarDesafio() {
     const desafio = desafios[numeros];
 
     document.getElementById("resultado").innerHTML=`
-    <h2> Olá ${name}</h2>
-    <h2> Seu Desafio é: </h2>
-    <h3> ${desafio} </h3>
+        <h2> Olá ${name}</h2>
+        <h2> Seu Desafio é: </h2>
+        <h3> ${desafio} </h3>
 
-    <label for="resposta"> 
-    Qual o seu projeto para desenvolver este desafio? 
-    </label>
+        <label for="resposta"> 
+     Qual o seu projeto para desenvolver este desafio? 
+        </label>
 
-    <br><br>
+         <br><br>
 
-     <textarea
-     id= "resposta"
-     rows = "5"
-     cols = "40"
-     placeholder = "Digite aqui sua resposta ..."
-     ></textarea>
+         <textarea
+        id= "resposta"
+        rows = "5"
+         cols = "40"
+         placeholder = "Digite aqui sua resposta ..."
+        ></textarea>
 
     <br><br>
 
@@ -51,7 +51,7 @@ function avaliarResposta(){
     //Criar as constantes que preciso
     const nome = document.getElementById("nome").value;
     const resposta = document.getElementById("resposta").value;
-    const textoDesafio = document.getElementById("# resultado h3").innerHTML;
+    const textoDesafio = document.querySelector("# resultado h3").innerText;
 
 
     if (resposta.trim() === "") {
@@ -72,15 +72,15 @@ function avaliarResposta(){
 
     const texto = resposta.toLowerCase();
 
-    if( texto.include("criar")||
-        texto.include("desenvolver")||
-        texto.include("elaborar") ){
+    if( texto.includes("criar")||
+        texto.includes("desenvolver")||
+        texto.includes("elaborar") ){
         pontos +=30;
     }
 
-    if( texto.include("pesquisa")||
-        texto.include("estudo")||
-        texto.include("projeto") ){
+    if( texto.includes("pesquisa")||
+        texto.includes("estudo")||
+        texto.includes("projeto") ){
         pontos +=30;
     }
 
@@ -114,8 +114,18 @@ function avaliarResposta(){
     <p><strong> Resposta: </strong> ${resposta}</p>
     <p><strong> Pontuação: </strong> ${pontos}</p>
     <p><strong> Nível: </strong> ${nivel}</p>
-    <p> O tempo de espera para o retorno da avaliação é ${tempo}</p>
-    `
-       
+    <p> O tempo de espera para o retorno da avaliação é ${tempo} dia(s) </p>
     
+   ${pontos >= 70
+    ? "Parabens, você conseguiu uma otima pontuação, continue assim!"
+    : "contunue pesquisando e desenvolvendo novos projetos, você consegura na proxima"
+
+   }    
+   
+    <button onclick="avaliarResposta()">
+        Enviar a resposta.
+    </button>
+    ` 
+
+
 }
