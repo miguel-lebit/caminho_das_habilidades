@@ -15,17 +15,18 @@ function iniciarDesafio() {
     if (nome === "") {
         alert("Digite seu nome para começar!");
         return;
+    }
 
     const numeros = Math.floor(Math.random() * desafios.length);
     const desafio = desafios[numeros];
 
     document.getElementById("resultado").innerHTML=`
-        <h2> Olá ${name}</h2>
+        <h2> Olá ${nome}</h2>
         <h2> Seu Desafio é: </h2>
         <h3> ${desafio} </h3>
 
         <label for="resposta"> 
-     Qual o seu projeto para desenvolver este desafio? 
+        Qual o seu projeto para desenvolver este desafio? 
         </label>
 
          <br><br>
@@ -33,16 +34,16 @@ function iniciarDesafio() {
          <textarea
         id= "resposta"
         rows = "5"
-         cols = "40"
+        cols = "40"
          placeholder = "Digite aqui sua resposta ..."
         ></textarea>
 
-    <br><br>
+        <br><br>
 
-    <button onclick="avaliarResposta()">
+        <button onclick="avaliarResposta()">
         Enviar a resposta.
-    </button>
-    `;
+        </button>
+        `;
    
 }
 
@@ -89,43 +90,40 @@ function avaliarResposta(){
    let nivel;
 
    if(pontos >=90){
-    nivel = "Invertor de idéias"
+    nivel = "Invertor de idéias";
    }
 
    else if(pontos >=60){
-    nivel = "Desenvolvedor de idéias"
+    nivel = "Desenvolvedor de idéias";
    }
 
    else if(pontos >=30){
-    nivel = "Explorador de idéias"
+    nivel = "Explorador de idéias";
    }
 
   else{ 
-    nivel = "Pesquisador iniciante"
+    nivel = "Pesquisador iniciante";
    }
+
+   //Relatóri final 
+
+   document.getElementById("resultado").innerHTML =
+   `<h2> Caminho das Habilidades - Relatório</h2>
+   <p><strong> Participante: </strong> ${nome}</p>
+   <p><strong> Desafio: </strong> ${textoDesafio}</p>
+   <p><strong> Resposta: </strong> ${resposta}</p>
+   <p><strong> Pontuação: </strong> ${pontos}</p>
+   <p><strong> Nível: </strong> ${nivel}</p>
+   <p> O tempo de espera para o retorno da avaliação é ${tempo} dia(s)</p>
+
+${pontos >= 70
+? "Parabéns, você conseguiu uma ótima pontuação, continue assim!"
+: "Contunue pesquisando e desenvolvendo novos projetos, você consegurá na próxima!"
+
 }
 
- //Relatorio final
-
-    document.getElementById("resultado").innerHTML =
-    `<h2> Caminho das Habilidades - Relatorio</h2>
-    <p><strong> Participante</strong> ${nome}</p>
-    <p><strong> Desafio: </strong> ${textoDesafio}</p>
-    <p><strong> Resposta: </strong> ${resposta}</p>
-    <p><strong> Pontuação: </strong> ${pontos}</p>
-    <p><strong> Nível: </strong> ${nivel}</p>
-    <p> O tempo de espera para o retorno da avaliação é ${tempo} dia(s) </p>
-    
-   ${pontos >= 70
-    ? "Parabens, você conseguiu uma otima pontuação, continue assim!"
-    : "contunue pesquisando e desenvolvendo novos projetos, você consegura na proxima"
-
-   }    
-   
-    <button onclick="avaliarResposta()">
+    <button onclick="location.reload()">
         Enviar a resposta.
     </button>
-    ` 
-
-
+   `
 }
