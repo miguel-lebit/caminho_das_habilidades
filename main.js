@@ -16,7 +16,7 @@ function iniciarDesafio() {
         alert("Digite seu nome para começar!");
         return;
 
-    const numeros = Math.floor(Math.randon() * desafios.length);
+    const numeros = Math.floor(Math.random() * desafios.length);
     const desafio = desafios[numeros];
 
     document.getElementById("resultado").innerHTML=`
@@ -84,7 +84,7 @@ function avaliarResposta(){
         pontos +=30;
     }
 
-   const tempo = Math.floor(Math.randon() * 10)+1;  
+   const tempo = Math.floor(Math.random() * 10)+1;  
 
    let nivel;
 
