@@ -104,5 +104,18 @@ function avaliarResposta(){
     nivel = "Pesquisador iniciante"
    }
 }
+
+ //Relatorio final
+
+    document.getElementById("resultado").innerHTML =
+    `<h2> Caminho das Habilidades - Relatorio</h2>
+    <p><strong> Participante</strong> ${nome}</p>
+    <p><strong> Desafio: </strong> ${textoDesafio}</p>
+    <p><strong> Resposta: </strong> ${resposta}</p>
+    <p><strong> Pontuação: </strong> ${pontos}</p>
+    <p><strong> Nível: </strong> ${nivel}</p>
+    <p> O tempo de espera para o retorno da avaliação é ${tempo}</p>
+    `
        
-    }
+    
+}
