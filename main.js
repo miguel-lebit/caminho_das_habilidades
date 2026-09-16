@@ -52,7 +52,7 @@ function avaliarResposta(){
     //Criar as constantes que preciso
     const nome = document.getElementById("nome").value;
     const resposta = document.getElementById("resposta").value;
-    const textoDesafio = document.querySelector("# resultado h3").innerText;
+    const textoDesafio = document.querySelector("#resultado h3").innerText;
 
 
     if (resposta.trim() === "") {
