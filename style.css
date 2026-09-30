@@ -6,4 +6,17 @@
 
 body{
     background-color: blue;
+
+
+    display: flex;
+    align-items: center;
+    padding: 20px;
+}
+
+.container{
+    width: 100%;
+    max-width: 650%;
+    background-color: antiquewhite;
+    text-align: center;
+    align-items: center;
 }
