@@ -31,4 +31,8 @@ h1{
 label{
     display: block;
     margin: 20px;
+    font-weight: bolder;
+    color: rgb(17, 17, 16);
+    margin-bottom: 10px;
+
 }
