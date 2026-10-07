@@ -41,3 +41,15 @@ label{
     margin-bottom: 10px;
 
 }
+
+button {
+    border: 2px solid rgb(89, 40, 107);
+    box-shadow: 0 5px 2px rosybrown;
+    border-radius: 5px;
+    background-color: rgb(186, 200, 224);
+    color: rgb(241, 137, 33);
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 10px;
+    padding: 10px 14px;
+}
