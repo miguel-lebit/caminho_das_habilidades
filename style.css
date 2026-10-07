@@ -82,4 +82,14 @@ button:active{
 
 #resultado h3{
     color: #a65708;
+    font-size 24px;
+    font-family: "Share Tech", sans-serif;
+}
+
+textarea{
+    width: 100%;
+    padding: 15px;
+    font-size: 16px;
+    border-radius: 25px;
+    transition: ;
 }
