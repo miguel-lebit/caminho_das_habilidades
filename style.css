@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Yellowtail&display=swap');
-</style>
+
+
 
 *{
     padding: 0px;
@@ -57,4 +58,5 @@ button {
     padding: 10px 14px;
     cursor: pointer;
     transition: 0.3s;
+     font-family: "Yellowtail", cursive;
 }
